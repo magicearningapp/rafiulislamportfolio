@@ -1,0 +1,97 @@
+{
+  "entities": {
+    "portfolio_content": {
+      "title": "Portfolio Core Content",
+      "description": "Stores profile, skills, and contact information",
+      "fields": {
+        "docId": {
+          "type": "string",
+          "description": "Document identifier: 'profile', 'skills', or 'contact'"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp of the last update"
+        }
+      }
+    },
+    "portfolio_projects": {
+      "title": "Portfolio Projects",
+      "description": "Individual project cards",
+      "fields": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "link": { "type": "string" },
+        "category": { "type": "string" },
+        "order": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "portfolio_photos": {
+      "title": "Photography Gallery",
+      "description": "Individual photography items",
+      "fields": {
+        "title": { "type": "string" },
+        "caption": { "type": "string" },
+        "image": { "type": "string" },
+        "images": { "type": "array" },
+        "category": { "type": "string" },
+        "location": { "type": "string" },
+        "date": { "type": "string" },
+        "tags": { "type": "array" },
+        "order": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "photo_reactions": {
+      "title": "Photo Facebook Reactions",
+      "description": "Stores like, love, care, haha, wow, sad, angry counts and user reaction tracking",
+      "fields": {
+        "photoId": { "type": "string" },
+        "counts": { "type": "object" },
+        "total": { "type": "number" },
+        "users": { "type": "object" }
+      }
+    },
+    "photo_comments": {
+      "title": "Photo Comments",
+      "description": "User comments on photography items with author names",
+      "fields": {
+        "photoId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "clientKey": { "type": "string" }
+      }
+    },
+    "pending_testimonials": {
+      "title": "Submitted Client Reviews",
+      "description": "Public user submissions waiting for admin approval",
+      "fields": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "company": { "type": "string" },
+        "rating": { "type": "number" },
+        "comment": { "type": "string" },
+        "metric": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "project_inquiries": {
+      "title": "Project Inquiries & Quotes",
+      "description": "Client quote inquiries submitted from the website",
+      "fields": {
+        "clientName": { "type": "string" },
+        "brandName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "services": { "type": "array" },
+        "budget": { "type": "string" },
+        "timeline": { "type": "string" },
+        "brief": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-kolapata-bg: #F4F1E6;
+  --color-kolapata-primary: #2F5D3A;
+  --color-kolapata-deep: #1F452B;
+  --color-kolapata-dark: #173522;
+  --color-kolapata-medium: #467A4A;
+  --color-kolapata-accent: #8FAF72;
+  --color-kolapata-card: #FFFFFF;
+  --color-kolapata-text: #172117;
+  --color-kolapata-muted: #4E5E4E;
+}
+
+:root {
+  --bg-color: #F4F1E6;
+  --primary-green: #2F5D3A;
+  --deep-green: #1F452B;
+  --dark-green: #173522;
+  --medium-green: #467A4A;
+  --light-accent: #8FAF72;
+  --card-bg: #FFFFFF;
+  --main-text: #172117;
+  --secondary-text: #4E5E4E;
+}
+
+html.dark {
+  --bg-color: #081109;
+  --primary-green: #48995B;
+  --deep-green: #18331E;
+  --dark-green: #0E1F13;
+  --medium-green: #68B072;
+  --light-accent: #A3E699;
+  --card-bg: #0F2013;
+  --main-text: #FFFFFF;
+  --secondary-text: #DCE8DD;
+  background-color: #081109 !important;
+  color: #FFFFFF !important;
+}
+
+html.dark body {
+  background-color: #081109 !important;
+  color: #FFFFFF !important;
+}
+
+html.dark ::selection {
+  background-color: #8FAF72;
+  color: #081109;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #081109;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #3D7A4D;
+}
+
+/* High-contrast and glow text rules for clear visibility */
+html:not(.dark) .text-\[\#4E5E4E\] {
+  color: #1E3824 !important;
+  font-weight: 500;
+}
+
+html:not(.dark) .text-\[\#172117\] {
+  color: #07150A !important;
+}
+
+html:not(.dark) .text-zinc-600,
+html:not(.dark) .text-zinc-500 {
+  color: #1E3824 !important;
+}
+
+/* Background overrides in dark mode */
+html.dark .bg-\[\#F4F1E6\] {
+  background-color: #081109 !important;
+}
+
+html.dark .bg-\[\#F4F1E6\]\/90 {
+  background-color: rgba(8, 17, 9, 0.94) !important;
+}
+
+html.dark .bg-\[\#F4F1E6\]\/80 {
+  background-color: rgba(8, 17, 9, 0.88) !important;
+}
+
+html.dark .bg-\[\#F4F1E6\]\/65 {
+  background-color: rgba(8, 17, 9, 0.82) !important;
+}
+
+html.dark .bg-\[\#F4F1E6\]\/70 {
+  background-color: rgba(15, 32, 19, 0.85) !important;
+}
+
+html.dark .bg-white {
+  background-color: #0F2013 !important;
+}
+
+html.dark .bg-white\/95 {
+  background-color: rgba(15, 32, 19, 0.97) !important;
+}
+
+html.dark .bg-white\/90 {
+  background-color: rgba(15, 32, 19, 0.92) !important;
+}
+
+html.dark .bg-white\/80 {
+  background-color: rgba(15, 32, 19, 0.85) !important;
+}
+
+html.dark .bg-white\/70 {
+  background-color: rgba(15, 32, 19, 0.75) !important;
+}
+
+/* High contrast crystal clear text colors in dark mode */
+html.dark .text-\[\#172117\] {
+  color: #FFFFFF !important;
+  text-shadow: 0 0 12px rgba(110, 231, 183, 0.35);
+}
+
+html.dark .text-\[\#4E5E4E\] {
+  color: #E2ECE3 !important;
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3 {
+  text-shadow: 0 0 16px rgba(74, 222, 128, 0.35), 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .text-\[\#2F5D3A\] {
+  color: #A3E699 !important;
+}
+
+html.dark .text-\[\#467A4A\] {
+  color: #8FAF72 !important;
+}
+
+html.dark .text-\[\#1F452B\] {
+  color: #BBE0BE !important;
+}
+
+/* Zinc text and bg overrides in dark mode for Admin Panel and UI components */
+html.dark .text-zinc-900,
+html.dark .text-zinc-800 {
+  color: #FFFFFF !important;
+}
+
+html.dark .text-zinc-700,
+html.dark .text-zinc-600 {
+  color: #E2EDE2 !important;
+}
+
+html.dark .text-zinc-500,
+html.dark .text-zinc-400 {
+  color: #A8BFA9 !important;
+}
+
+/* ========================================================= */
+/* RESUME / CV SHEET ISOLATION: ALWAYS CRISP & COLORFUL      */
+/* ========================================================= */
+html.dark #cv-printable-area {
+  background-color: #1E293B !important;
+}
+
+html.dark #cv-printable-area .cv-sheet,
+#cv-printable-area .cv-sheet {
+  background-color: #FFFFFF !important;
+  color: #1A202C !important;
+  text-shadow: none !important;
+}
+
+html.dark #cv-printable-area .cv-sheet *,
+#cv-printable-area .cv-sheet * {
+  text-shadow: none !important;
+}
+
+html.dark #cv-printable-area .cv-sheet .bg-white {
+  background-color: #FFFFFF !important;
+}
+
+html.dark .bg-zinc-50 {
+  background-color: #122617 !important;
+}
+
+html.dark .bg-zinc-100 {
+  background-color: #162E1D !important;
+}
+
+html.dark .bg-zinc-200 {
+  background-color: #1F3F28 !important;
+}
+
+html.dark .border-zinc-100,
+html.dark .border-zinc-200,
+html.dark .border-zinc-300 {
+  border-color: rgba(143, 175, 114, 0.35) !important;
+}
+
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #122617 !important;
+  color: #FFFFFF !important;
+  border-color: rgba(143, 175, 114, 0.45) !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #8B9E8C !important;
+}
+
+html.dark input:focus,
+html.dark textarea:focus,
+html.dark select:focus {
+  border-color: #A3E699 !important;
+  box-shadow: 0 0 0 1px #A3E699, 0 0 12px rgba(163, 230, 153, 0.25) !important;
+}
+
+/* Borders in dark mode */
+html.dark .border-\[\#8FAF72\]\/30 {
+  border-color: rgba(143, 175, 114, 0.35) !important;
+}
+
+html.dark .border-\[\#8FAF72\]\/35 {
+  border-color: rgba(143, 175, 114, 0.45) !important;
+}
+
+html.dark .border-\[\#8FAF72\]\/40 {
+  border-color: rgba(143, 175, 114, 0.5) !important;
+}
+
+html.dark .border-\[\#2F5D3A\]\/40 {
+  border-color: rgba(143, 175, 114, 0.5) !important;
+}
+
+html.dark .border-\[\#2F5D3A\]\/20 {
+  border-color: rgba(143, 175, 114, 0.4) !important;
+}
+
+html.dark .bg-\[\#8FAF72\]\/10 {
+  background-color: rgba(143, 175, 114, 0.12) !important;
+}
+
+html.dark .bg-\[\#8FAF72\]\/15 {
+  background-color: rgba(143, 175, 114, 0.18) !important;
+}
+
+html.dark .bg-\[\#8FAF72\]\/20 {
+  background-color: rgba(143, 175, 114, 0.25) !important;
+}
+
+html.dark .bg-\[\#8FAF72\]\/25 {
+  background-color: rgba(143, 175, 114, 0.3) !important;
+}
+
+html.dark .bg-\[\#2F5D3A\]\/10 {
+  background-color: rgba(143, 175, 114, 0.18) !important;
+}
+
+html.dark .bg-\[\#173522\] {
+  background-color: #122818 !important;
+}
+
+/* Luminous Glow Utilities */
+.glow-mint {
+  text-shadow: 0 0 18px rgba(163, 230, 153, 0.6), 0 0 32px rgba(143, 175, 114, 0.35);
+}
+
+.glow-heading {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.35), 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.glow-card {
+  box-shadow: 0 0 25px rgba(143, 175, 114, 0.15), 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.glow-btn-emerald {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F4F1E6;
+    color: #172117;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    background-color: #F4F1E6;
+    color: #172117;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #173522;
+    color: #F4F1E6;
+  }
+}
+
+/* Minimal subtle scrollbar styled with the new palette */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F1E6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8FAF72;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #467A4A;
+}
+
+/* Image protection & anti-save */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* Ambient dynamic background patterns aligned with palette */
+.bg-grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(23, 53, 34, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 53, 34, 0.045) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(23, 53, 34, 0.075) 1px, transparent 1px);
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.08) translate(15px, -15px);
+    opacity: 0.65;
+  }
+}
+
+.animate-ambient-1 {
+  animation: pulse-slow 12s ease-in-out infinite;
+}
+
+.animate-ambient-2 {
+  animation: pulse-slow 16s ease-in-out infinite reverse;
+}
+
+/* Print optimization for Executive CV / Resume */
+@media print {
+  @page {
+    margin: 8mm;
+    size: auto;
+  }
+
+  body {
+    background: white !important;
+    color: #0A180E !important;
+    font-size: 11pt;
+  }
+
+  /* Hide site shell elements when printing */
+  #navbar,
+  footer,
+  #home,
+  #about,
+  #skills,
+  #works,
+  #case-studies,
+  #testimonials,
+  #gallery,
+  #contact,
+  .animate-ambient-1,
+  .animate-ambient-2 {
+    display: none !important;
+  }
+
+  /* Reset modal containers for clean flat document printing */
+  .fixed.inset-0 {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .fixed.inset-0 > div {
+    max-height: none !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  #cv-printable-area {
+    overflow: visible !important;
+    height: auto !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Prevent awkward page break splitting */
+  #cv-printable-area .space-y-4 > div,
+  #cv-printable-area .space-y-3 > div {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .break-before-page {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+}
+
+
